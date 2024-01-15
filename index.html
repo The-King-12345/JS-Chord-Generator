@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-euiv="X-UA-Compatible" content="ie=edge">
+        <title>Random Chord Generator</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Boogaloo&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <h1>Random Chord Generator</h1>
+        <div id="chordDisplay"></div>
+        <button onclick="generateRandomChord()">Change Chord</button>
+        
+        <div class="dropdown">
+            <button id="dropdownButton">Select Chords</button>
+            <div id="chordList" class="dropdown-content">
+                <div class="column">   
+                    <label for="Cmaj7"><input type="checkbox" class="chord-checkbox" id="Cmaj7" value="Cmaj7" checked>Cmaj7</label><br>
+                    <label for="C7"><input type="checkbox" class="chord-checkbox" id="C7" value="C7" checked>C7</label><br>
+                    <label for="Cm7"><input type="checkbox" class="chord-checkbox" id="Cm7" value="Cm7" checked>Cm7</label><br>
+                </div> 
+                <div class="column">
+                    <label for="Dbmaj7"><input type="checkbox" class="chord-checkbox" id="Dbmaj7" value="Dbmaj7" checked>Dbmaj7</label><br>
+                    <label for="Db7"><input type="checkbox" class="chord-checkbox" id="Db7" value="Db7" checked>Db7</label><br>
+                    <label for="Dbm7"><input type="checkbox" class="chord-checkbox" id="Dbm7" value="Dbm7" checked>Dbm7</label><br>
+                </div> 
+                <div class="column">
+                    <label for="Dmaj7"><input type="checkbox" class="chord-checkbox" id="Dmaj7" value="Dmaj7" checked>Dmaj7</label><br>
+                    <label for="D7"><input type="checkbox" class="chord-checkbox" id="D7" value="D7" checked>D7</label><br>
+                    <label for="Dm7"><input type="checkbox" class="chord-checkbox" id="Dm7" value="Dm7" checked>Dm7</label><br>
+                </div> 
+                <div class="column">
+                    <label for="Ebmaj7"><input type="checkbox" class="chord-checkbox" id="Ebmaj7" value="Ebmaj7" checked>Ebmaj7</label><br>
+                    <label for="Eb7"><input type="checkbox" class="chord-checkbox" id="Eb7" value="Eb7" checked>Eb7</label><br>
+                    <label for="Ebm7"><input type="checkbox" class="chord-checkbox" id="Ebm7" value="Ebm7" checked>Ebm7</label><br>
+                </div> 
+                <div class="column">
+                    <label for="Emaj7"><input type="checkbox" class="chord-checkbox" id="Emaj7" value="Emaj7" checked>Emaj7</label><br>
+                    <label for="E7"><input type="checkbox" class="chord-checkbox" id="E7" value="E7" checked>E7</label><br>
+                    <label for="Em7"><input type="checkbox" class="chord-checkbox" id="Em7" value="Em7" checked>Ebm7</label><br>
+                </div> 
+                <div class="column">
+                    <label for="Fmaj7"><input type="checkbox" class="chord-checkbox" id="Fmaj7" value="Fmaj7" checked>Fmaj7</label><br>
+                    <label for="F7"><input type="checkbox" class="chord-checkbox" id="F7" value="F7" checked>F7</label><br>
+                    <label for="Fm7"><input type="checkbox" class="chord-checkbox" id="Fm7" value="Fm7" checked>Fm7</label><br>
+                </div> 
+                <div class="column">
+                    <label for="Gbmaj7"><input type="checkbox" class="chord-checkbox" id="Gbmaj7" value="Gbmaj7" checked>Gbmaj7</label><br>
+                    <label for="Gb7"><input type="checkbox" class="chord-checkbox" id="Gb7" value="Gb7" checked>Gb7</label><br>
+                    <label for="Gbm7"><input type="checkbox" class="chord-checkbox" id="Gbm7" value="Gbm7" checked>Gbm7</label><br>
+                </div> 
+                <div class="column">
+                    <label for="Gmaj7"><input type="checkbox" class="chord-checkbox" id="Gmaj7" value="Gmaj7" checked>Gmaj7</label><br>
+                    <label for="G7"><input type="checkbox" class="chord-checkbox" id="G7" value="G7" checked>G7</label><br>
+                    <label for="Gm7"><input type="checkbox" class="chord-checkbox" id="Gm7" value="Gm7" checked>Gm7</label><br>
+                </div> 
+                <div class="column">
+                    <label for="Abmaj7"><input type="checkbox" class="chord-checkbox" id="Abmaj7" value="Abmaj7" checked>Abmaj7</label><br>
+                    <label for="Ab7"><input type="checkbox" class="chord-checkbox" id="Ab7" value="Ab7" checked>Ab7</label><br>
+                    <label for="Abm7"><input type="checkbox" class="chord-checkbox" id="Abm7" value="Abm7" checked>Abm7</label><br>
+                </div> 
+                <div class="column">
+                    <label for="Amaj7"><input type="checkbox" class="chord-checkbox" id="Amaj7" value="Amaj7" checked>Amaj7</label><br>
+                    <label for="A7"><input type="checkbox" class="chord-checkbox" id="A7" value="A7" checked>A7</label><br>
+                    <label for="Am7"><input type="checkbox" class="chord-checkbox" id="Am7" value="Am7" checked>Am7</label><br>
+                </div> 
+                <div class="column">
+                    <label for="Bbmaj7"><input type="checkbox" class="chord-checkbox" id="Bbmaj7" value="Bbmaj7" checked>Bbmaj7</label><br>
+                    <label for="Bb7"><input type="checkbox" class="chord-checkbox" id="Bb7" value="Bb7" checked>Bb7</label><br>
+                    <label for="Bbm7"><input type="checkbox" class="chord-checkbox" id="Bbm7" value="Bbm7" checked>Bbm7</label><br>
+                </div> 
+                <div class="column">
+                    <label for="Bmaj7"><input type="checkbox" class="chord-checkbox" id="Bmaj7" value="Bmaj7" checked>Bmaj7</label><br>
+                    <label for="B7"><input type="checkbox" class="chord-checkbox" id="B7" value="B7" checked>B7</label><br>
+                    <label for="Bm7"><input type="checkbox" class="chord-checkbox" id="Bm7" value="Bm7" checked>Bm7</label><br>
+                </div> 
+            </div>
+        </div>
+
+        <div class="progress-bar">
+            <div id="progress" class="progress"></div>
+        </div>
+
+        <script src="./main.js"></script>
+    </body>
+</html>
